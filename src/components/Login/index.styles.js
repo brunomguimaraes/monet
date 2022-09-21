@@ -49,6 +49,7 @@ export const Button = styled.button`
   text-decoration: none;
   display: inline-block;
   padding: 16px 32px;
+  cursor: pointer;
 `;
 
 export const Form = styled.form`

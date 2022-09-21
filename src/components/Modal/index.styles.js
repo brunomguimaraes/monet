@@ -14,4 +14,7 @@ export const ModalWrapper = styled.div`
   border: solid 1px ${mainColors.black};
   border-radius: 0.5em;
   background: ${mainColors.black};
+  -webkit-box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
 `;
