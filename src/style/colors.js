@@ -1,15 +1,17 @@
 
 export const mainColors = {
   // main
-  primary: '#0E0E52',
-  secondary: '#62BEC1',
-  clear: '#B7ADCF',
+  primary: '#DB3069',
+  primaryLight: '#B05476',
+  secondary: '#443850',
   
   // backgrounds
   primaryBackground: '#086788',
   clearBackground: '#E2DCDE',
-
+  
   // basic
   white: '#FFFFFF',
-  black: '#000000',
+  black: '#101010',
+  lightGray: '#B7ADCF',
+  darkGray: '#303137',
 }
