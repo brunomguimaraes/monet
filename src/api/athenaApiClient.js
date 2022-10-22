@@ -7,7 +7,7 @@ const athenaApiClient = {
 				'Login',
 				'/auth/login',
 				{
-					username: email,
+					email,
 					password,
 				},
 			);

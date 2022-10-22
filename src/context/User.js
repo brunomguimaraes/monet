@@ -13,9 +13,9 @@ export const UserProvider = ({ children }) => {
   const [loading, setLoading] = React.useState(() => false);
   const [state, setState] = React.useState(() => initialUserContextState);
 
-  const _login = ({ email, password }) => {
+  const _login = async ({ email, password }) => {
     setLoading(true);
-    api.auth.login(email, password).then((res) => console.log('=> Success:', res)
+    await api.auth.login(email, password).then((res) => console.log('=> Success:', res)
     ).catch((err) => console.log('=> Error:', err))
   }
 
