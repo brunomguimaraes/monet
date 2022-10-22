@@ -1,4 +1,5 @@
 import React, { createContext } from 'react';
+import api from '../api/athenaApiClient';
 
 const Context = createContext({});
 const { Provider } = Context;
@@ -12,8 +13,10 @@ export const UserProvider = ({ children }) => {
   const [loading, setLoading] = React.useState(() => false);
   const [state, setState] = React.useState(() => initialUserContextState);
 
-  const _login = () => {
+  const _login = ({ email, password }) => {
     setLoading(true);
+    api.auth.login(email, password).then((res) => console.log('=> Success:', res)
+    ).catch((err) => console.log('=> Error:', err))
   }
 
   const context = React.useMemo(
@@ -24,7 +27,7 @@ export const UserProvider = ({ children }) => {
       ready: !loading,
       login: _login,
     }),
-    [loading, metadata, user],
+    [loading, state],
   );
 
 
