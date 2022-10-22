@@ -15,7 +15,7 @@ export const UserProvider = ({ children }) => {
 
   const _login = async ({ email, password }) => {
     setLoading(true);
-    await api.auth.login(email, password).then((res) => console.log('=> Success:', res)
+    await api.auth.login(email, password).then((res) => console.log('=> Success response:', res)
     ).catch((err) => console.log('=> Error:', err))
   }
 
