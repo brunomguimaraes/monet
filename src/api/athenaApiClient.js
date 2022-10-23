@@ -28,12 +28,12 @@ export default athenaApiClient;
 ///////////////////////// Internal Functions ///////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-const _defaultSuccessHandler = ({ result }) => result;
+const _defaultSuccessHandler = (data) => data;
 
 const _createDefaultErrorHandler = (thing, operation = 'retrieve') => (err) => {
 	console.log(
-		`Failed to ${operation} "${thing}" from API with error: `,
-		err.errorCode,
+		`Failed to ${operation} "${thing}" from API with: `,
+		err,
 	);
 
 	return Promise.reject(err);
@@ -76,7 +76,7 @@ const _standardPost = (
 
 	let resultPromise = requestPromise
 		.then(_defaultSuccessHandler)
-		.catch(_createDefaultErrorHandler(endpointEntity, 'update'));
+		.catch(_createDefaultErrorHandler(endpointEntity, 'post'));
 
 	// Expose the abort API on the resulting promise
 	// resultPromise.abort = () => requestPromise.abort();

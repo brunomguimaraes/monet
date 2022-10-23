@@ -71,19 +71,12 @@ let service = {
 			});
 
 			request.then((res) => {
-				if (!res.body.success) {
-					console.log(
-						`Request to ${res.req.url} responded with status ${res.status} ` +
-						`but returned "success: ${res.body.success}" with error: `,
-						res.body.error,
-					);
-
-					return reject(new Error(res.body.error));
-				}
-
-				return resolve(res.body);
+				return resolve(res.data);
 			}
-			).catch((err) => reject(new Error(err)))
+			).catch((err) => {
+				console.log(err)
+				reject(new Error(err.message))
+			})
 		})
 
 		return promise;
