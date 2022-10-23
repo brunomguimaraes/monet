@@ -1,6 +1,6 @@
-import { ReactComponent as MarketIcon } from '../assets/icons/market-stand.svg';
-import { ReactComponent as GiftIcon } from '../assets/icons/gift.svg';
-import { ReactComponent as PiggyBankIcon } from '../assets/icons/piggy-bank.svg';
+import { ReactComponent as MarketIcon } from 'assets/icons/market-stand.svg';
+import { ReactComponent as GiftIcon } from 'assets/icons/gift.svg';
+import { ReactComponent as PiggyBankIcon } from 'assets/icons/piggy-bank.svg';
 
 import { mainColors } from "../../style/colors";
 

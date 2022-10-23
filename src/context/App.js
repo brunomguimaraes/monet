@@ -1,9 +1,9 @@
 import React from 'react';
 
-import ComposeChildren from '../components/helpers/ComposeChildren';
+import ComposeChildren from 'components/helpers/ComposeChildren';
 
 // Context Providers
-import { UserProvider } from './User';
+import { UserProvider } from 'context/User';
 
 /*
  * Composes all app wide context providers that

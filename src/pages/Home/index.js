@@ -1,5 +1,5 @@
-import Login from "../../components/Login";
-import Modal from "../../components/Modal";
+import Login from "components/Login";
+import Modal from "components/Modal";
 
 import * as Styled from "./index.styles";
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { mainColors } from "../../style/colors";
+import { mainColors } from "style/colors";
 
 export const ModalWrapper = styled.div`
   z-index: 10;
