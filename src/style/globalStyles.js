@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background: ${mainColors.darkGray};
+    background: ${mainColors.primaryBackground};
     font-family: Open-Sans, Helvetica, Sans-Serif;
   }
 `;

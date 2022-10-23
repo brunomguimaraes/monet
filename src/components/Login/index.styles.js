@@ -4,12 +4,14 @@ import { mainColors } from "../../style/colors";
 
 export const Header = styled.h1`
   font-size: 20px;
+  font-family: 'Poppins', sans-serif;
   color: ${mainColors.white};
   margin-bottom: 32px;
 `;
 
 export const Label = styled.label`
   font-size: 16px;
+  font-family: 'Poppins', sans-serif;
   color: ${mainColors.white};
   margin-bottom: 4px;
 `;
@@ -17,6 +19,7 @@ export const Label = styled.label`
 export const Input = styled.input`
 position: relative;
   font-size: 16px;
+  font-family: 'Poppins', sans-serif;
   width: 100%;
   padding: 16px;
   border: 2px solid ${mainColors.lightGray};
@@ -41,7 +44,7 @@ position: relative;
 `;
 
 export const Button = styled.button`
-  background: linear-gradient(0.25turn, ${mainColors.secondary}, ${mainColors.primary},  ${mainColors.primaryLight});
+  background: linear-gradient(0.25turn, ${mainColors.lightPurple}, ${mainColors.blue});
   border: 0px solid transparent;
   border-radius: 8px;
   color: ${mainColors.white};
