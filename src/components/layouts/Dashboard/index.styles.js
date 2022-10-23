@@ -49,5 +49,5 @@ export const Title = styled.span`
 export const Subtitle = styled.span`
   font-size: 10px;
   font-family: 'Poppins', sans-serif;
-  color: ${mainColors.lightPurple};
+  color: ${mainColors.white};
 `
