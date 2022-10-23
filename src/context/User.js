@@ -22,19 +22,19 @@ export const UserProvider = ({ children }) => {
     setLoading(true);
     await api.auth.login(email, password).then((res) => {
       _saveAuthToken(res)
+
+      //TODO: change this
+      setState(() => initialUserContextState)
     }).catch((err) => console.log('=> Error:', err))
   }
 
-  const context = React.useMemo(
-    () => ({
-      loading,
-      metadata: state.metadata,
-      user: state.user,
-      ready: !loading,
-      login: _login,
-    }),
-    [loading, state],
-  );
+  const context = () => ({
+    loading,
+    metadata: state.metadata,
+    user: state.user,
+    ready: !loading,
+    login: _login,
+  })
 
 
   return (
