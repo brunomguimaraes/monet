@@ -17,7 +17,7 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-position: relative;
+  position: relative;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
   width: 100%;
