@@ -1,8 +1,10 @@
+import { NavLink } from 'react-router-dom';
+
 import { ReactComponent as MarketIcon } from 'assets/icons/market-stand.svg';
 import { ReactComponent as GiftIcon } from 'assets/icons/gift.svg';
 import { ReactComponent as PiggyBankIcon } from 'assets/icons/piggy-bank.svg';
 
-import { mainColors } from "../../style/colors";
+import { mainColors } from "style/colors";
 
 import * as Styled from "./index.styles";
 
@@ -17,9 +19,11 @@ const TabsMenu = () => {
 				<Styled.MenuItem>
 					<GiftIcon width={16} height={16} color={mainColors.lightGray} /> Bucket list
 				</Styled.MenuItem>
-				<Styled.MenuItem>
-					<PiggyBankIcon width={16} height={16} color={mainColors.lightGray} /> Finances
-				</Styled.MenuItem>
+				<NavLink to={'/'}>
+					<Styled.MenuItem>
+						<PiggyBankIcon width={16} height={16} color={mainColors.lightGray} /> Finances
+					</Styled.MenuItem>
+				</NavLink>
 			</Styled.MenuSection>
 
 		</Styled.MenuWrapper>
