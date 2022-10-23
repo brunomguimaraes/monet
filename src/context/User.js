@@ -1,5 +1,6 @@
 import React, { createContext } from 'react';
 import api from '../api/athenaApiClient';
+import localForage from '../services/localForage'
 
 const Context = createContext({});
 const { Provider } = Context;
@@ -13,10 +14,15 @@ export const UserProvider = ({ children }) => {
   const [loading, setLoading] = React.useState(() => false);
   const [state, setState] = React.useState(() => initialUserContextState);
 
+  const _saveAuthToken = (token) => {
+    localForage.set('token', token)
+  }
+
   const _login = async ({ email, password }) => {
     setLoading(true);
-    await api.auth.login(email, password).then((res) => console.log('=> Success response:', res)
-    ).catch((err) => console.log('=> Error:', err))
+    await api.auth.login(email, password).then((res) => {
+      _saveAuthToken(res)
+    }).catch((err) => console.log('=> Error:', err))
   }
 
   const context = React.useMemo(

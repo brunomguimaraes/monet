@@ -11,7 +11,6 @@ const initialFormState = {
 
 const Login = () => {
   const ctx = useContext(UserContext);
-  console.log('=>', ctx)
 
   const [formState, setFormState] = useState(() => initialFormState);
 
@@ -35,7 +34,6 @@ const Login = () => {
       <Styled.Button
         onClick={(e) => {
           e.preventDefault();
-          console.log('=> clicked', formState)
           ctx.login(formState)
         }}
       >
