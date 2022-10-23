@@ -1,6 +1,6 @@
 import React, { createContext } from 'react';
-import api from '../api/athenaApiClient';
-import localForage from '../services/localForage'
+import api from 'api/athenaApiClient';
+import localForage from 'services/localForage'
 
 const Context = createContext({});
 const { Provider } = Context;

@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { mainColors } from "../../style/colors";
+import { mainColors } from "style/colors";
 
 export const MenuWrapper = styled.nav`
   padding-top: 80px;

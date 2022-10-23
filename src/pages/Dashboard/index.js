@@ -1,5 +1,5 @@
-import DashboardLayout from "../../components/layouts/Dashboard";
-import TabsMenu from "../../components/TabsMenu";
+import DashboardLayout from "components/layouts/Dashboard";
+import TabsMenu from "components/TabsMenu";
 
 import * as Styled from "./index.styles";
 

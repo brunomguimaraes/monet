@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
-import Dashboard from "./pages/Dashboard";
-import Home from "./pages/Home";
+import Dashboard from "pages/Dashboard";
+import Home from "pages/Home";
 
-import AppContextProviders from "./context/App"
+import AppContextProviders from "context/App"
 
-import GlobalStyle from "./style/globalStyles";
+import GlobalStyle from "style/globalStyles";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

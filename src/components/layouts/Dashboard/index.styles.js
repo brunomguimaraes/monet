@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { mainColors } from "../../../style/colors";
+import { mainColors } from "style/colors";
 
 export const DashContainer = styled.div`
   display: grid;
